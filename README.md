@@ -1,5 +1,7 @@
 # Eggs in a box! [![Build Status](https://travis-ci.org/gfx/gradle-android-eggbox-plugin.svg)](https://travis-ci.org/gfx/gradle-android-eggbox-plugin)
 
+[![Eggbox](eggbox-by-Lord-Inquisitor.jpg)](https://www.flickr.com/photos/13453980@N06/8372033532)
+
 ```
 plugin/   - The main module of a Gradle plugin
 example/  - An example android application that uses this plugin
