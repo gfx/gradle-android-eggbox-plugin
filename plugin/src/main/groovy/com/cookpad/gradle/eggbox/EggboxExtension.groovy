@@ -4,7 +4,7 @@ import groovy.transform.CompileStatic
 
 @CompileStatic
 class EggboxExtension {
-    static final def NAME = "eggbox"
+    static final String NAME = "eggbox"
 
     def message = "default message"
 }

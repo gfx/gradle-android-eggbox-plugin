@@ -24,7 +24,7 @@ repositories {
 dependencies {
     compile gradleApi()
     compile localGroovy()
-    compile 'com.android.tools.build:gradle:1.0.0-rc1'
+    compile 'com.android.tools.build:gradle:1.1.0-rc2'
 }
 
 // artifact settings
@@ -71,10 +71,10 @@ uploadArchives {
 
 modifyPom {
     project {
-        name 'Android Gradle Plugin Template'
-        description 'Hello, world!'
+        name 'Android Gradle Eggbox'
+        description 'Android Dependency Locker'
         url REPOSITORY_URL
-        inceptionYear '2014'
+        inceptionYear '2015'
 
         scm {
             url REPOSITORY_URL
