@@ -1,5 +1,5 @@
-# The revision history of XXX
+# The revision history of Android Eggbox Plugin
 
-## v0.0.0 - 2014-05-10 12:00:00+0900
+## v0.0.1 - 2015-02-19
 
 * Initial Release

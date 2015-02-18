@@ -1,8 +1,8 @@
 final REPOSITORY_URL = 'https://github.com/gfx/gradle-plugin-template'
 
-final GROUP_ID = 'com.cookpad.gradle'
+final GROUP_ID = 'com.github.gfx.gradle'
 final ARTIFACT_ID = 'android-eggbox'
-final VERSION = '0.0.0'
+final VERSION = '0.0.1'
 
 buildscript {
     repositories {
@@ -24,7 +24,7 @@ repositories {
 dependencies {
     compile gradleApi()
     compile localGroovy()
-    compile 'com.android.tools.build:gradle:1.1.0-rc2'
+    compile 'com.android.tools.build:gradle:1.1.0'
 }
 
 // artifact settings
