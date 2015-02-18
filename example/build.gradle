@@ -24,6 +24,7 @@ dependencies {
     debugCompile 'com.jakewharton:butterknife:6.+'
     releaseCompile 'com.jakewharton:butterknife:5.+'
     compile 'io.reactivex:rxandroid:+'
+    compile 'com.android.support:appcompat-v7:+'
 
     androidTestCompile 'com.android.support.test:testing-support-lib:+'
 }
