@@ -46,19 +46,16 @@ public class EggboxPlugin implements Plugin<Project> {
                 def buildType = artifact.attribute('build-type').toString()
                 def flavor = artifact.attribute('flavor')
 
-                def decl = flavor ? "${flavor}${buildType.capitalize()}Compile" : "${buildType}Compile"
-
                 artifact.each { Node item ->
+                    def value = item.text().trim()
                     if (item.name() == "compile") {
-                        def value = item.text().trim()
-                        println("${decl}('${value}')")
+                        def decl = flavor ? "${flavor}${buildType.capitalize()}Compile" : "${buildType}Compile"
                         project.dependencies.invokeMethod(decl, value)
-                    } else if (item.name() == "test") {
-
+                    } else if (item.name() == "test-compile") {
+                        project.dependencies.invokeMethod('androidTestCompile', value)
                     } else {
                         project.logger.error("Unexpected node: $item")
                     }
-
                 }
             }
         } else {
@@ -88,10 +85,9 @@ public class EggboxPlugin implements Plugin<Project> {
 
                     def testVariant = variant.testVariant
                     if (testVariant) {
-                        def testNode = buildNode.appendNode('test')
                         testVariant.compileLibraries.each { File file ->
                             if (file.toString().contains('/.gradle/caches/')) {
-                                testNode.appendNode('compile', artifactId(file))
+                                buildNode.appendNode('test-compile', artifactId(file))
                             }
                         }
                     }
@@ -105,7 +101,7 @@ public class EggboxPlugin implements Plugin<Project> {
         }
 
         project.repositories.all { DefaultMavenArtifactRepository a ->
-            println("repository: ${a.name} ${a.url}")
+            project.logger.debug("[eggbox] repository: ${a.name} ${a.url}")
         }
 
     }
@@ -128,7 +124,7 @@ public class EggboxPlugin implements Plugin<Project> {
     }
 
     static ArtifactId artifactId(File file) {
-        println("file: $file")
+        println("[eggbox] file: $file")
         // file is something like $cache/io.reactivex/rxjava/1.0.4/a607b0e12d2de769dc219e00b60a9b3d9e730d/rxjava-1.0.4.jar
         def version = file.parentFile.parentFile.name
         def artifactName = file.parentFile.parentFile.parentFile.name
