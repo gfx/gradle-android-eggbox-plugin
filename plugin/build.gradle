@@ -2,7 +2,7 @@ final REPOSITORY_URL = 'https://github.com/gfx/gradle-plugin-template'
 
 final GROUP_ID = 'com.github.gfx.gradle'
 final ARTIFACT_ID = 'android-eggbox'
-final VERSION = '0.0.1'
+final VERSION = '0.0.2'
 
 buildscript {
     repositories {
