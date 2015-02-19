@@ -50,9 +50,9 @@ public class EggboxPlugin implements Plugin<Project> {
                     def value = item.text().trim()
                     if (item.name() == "compile") {
                         def decl = flavor ? "${flavor}${buildType.capitalize()}Compile" : "${buildType}Compile"
-                        project.dependencies.invokeMethod(decl, value)
+                        project.dependencies.add(decl, value)
                     } else if (item.name() == "test-compile") {
-                        project.dependencies.invokeMethod('androidTestCompile', value)
+                        project.dependencies.add('androidTestCompile', value)
                     } else {
                         project.logger.error("Unexpected node: $item")
                     }
