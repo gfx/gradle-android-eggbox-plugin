@@ -1,22 +1,12 @@
-package com.cookpad.gradle.eggbox
+package com.github.gfx.eggbox
 
 import com.android.build.gradle.AppExtension
 import com.android.build.gradle.api.ApplicationVariant
-import com.android.builder.model.AndroidProject
-import groovy.mock.interceptor.MockFor
-import groovy.xml.MarkupBuilder
 import org.gradle.api.GradleException
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import groovy.transform.CompileStatic
-import org.gradle.api.artifacts.ComponentMetadata
-import org.gradle.api.artifacts.ComponentMetadataDetails
-import org.gradle.api.artifacts.repositories.ArtifactRepository
-import org.gradle.api.artifacts.repositories.MavenArtifactRepository
-import org.gradle.api.internal.artifacts.dsl.dependencies.DefaultDependencyHandler
-import org.gradle.api.internal.artifacts.query.DefaultArtifactResolutionQuery
 import org.gradle.api.internal.artifacts.repositories.DefaultMavenArtifactRepository
-import org.gradle.api.internal.project.DefaultProject
 
 // see also:
 // http://www.gradle.org/docs/current/userguide/custom_plugins.html

@@ -7,7 +7,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:orientation="vertical"
-    tools:context="com.cookpad.gradle.eggbox.example.MainActivity">
+    tools:context="com.github.gfx.eggbox.example.MainActivity">
 
     <TextView
         android:layout_gravity="center_horizontal"

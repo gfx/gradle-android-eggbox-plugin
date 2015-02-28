@@ -1,4 +1,4 @@
-package com.cookpad.gradle.eggbox.example;
+package com.github.gfx.eggbox.example;
 
 import android.app.Activity;
 import android.app.AlertDialog;

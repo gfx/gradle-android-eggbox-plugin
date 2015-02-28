@@ -1,8 +1,8 @@
 final REPOSITORY_URL = 'https://github.com/gfx/gradle-plugin-template'
 
-final GROUP_ID = 'com.github.gfx.gradle'
+final GROUP_ID = 'com.github.gfx.eggbox'
 final ARTIFACT_ID = 'android-eggbox'
-final VERSION = '0.0.2'
+final VERSION = '0.1.0'
 
 buildscript {
     repositories {
@@ -92,7 +92,7 @@ modifyPom {
             developer {
                 id 'gfx'
                 name 'FUJI Goro'
-                email 'goro-fuji@cookpad.com'
+                email 'goro-fuji@github.com'
             }
         }
     }

@@ -1,4 +1,4 @@
-package com.cookpad.gradle.eggbox
+package com.github.gfx.eggbox
 
 import groovy.transform.CompileStatic
 

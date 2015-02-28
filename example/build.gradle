@@ -1,6 +1,6 @@
 apply plugin: 'android-sdk-manager'
 apply plugin: 'com.android.application'
-apply plugin: 'com.cookpad.gradle.eggbox'
+apply plugin: 'com.github.gfx.eggbox'
 
 android {
     compileSdkVersion 21
