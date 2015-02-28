@@ -20,7 +20,7 @@ public class EggboxPlugin implements Plugin<Project> {
         project.extensions.add(EggboxExtension.NAME, EggboxExtension as Object)
 
         final lockFile = project.file('eggbox.xml')
-        final deployDir = project.file('.eggbox')
+        //final deployDir = project.file('.eggbox')
 
         final android = project.extensions.findByType(AppExtension)
         if (!android) {

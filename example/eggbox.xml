@@ -1,5 +1,5 @@
 <dependency>
-  <artifact build-type="debug">
+  <artifact flavor="production" build-type="debug">
     <compile>
       io.reactivex:rxandroid:0.24.0
     </compile>
@@ -10,13 +10,53 @@
       io.reactivex:rxjava:1.0.4
     </compile>
     <test-compile>
+      com.squareup.okhttp:okhttp:2.0.0
+    </test-compile>
+    <test-compile>
+      junit:junit-dep:4.10
+    </test-compile>
+    <test-compile>
+      com.squareup.okio:okio:1.0.0
+    </test-compile>
+    <test-compile>
+      org.hamcrest:hamcrest-core:1.1
+    </test-compile>
+  </artifact>
+  <artifact flavor="production" build-type="release">
+    <compile>
+      io.reactivex:rxandroid:0.24.0
+    </compile>
+    <compile>
+      com.jakewharton:butterknife:5.1.2
+    </compile>
+    <compile>
+      io.reactivex:rxjava:1.0.4
+    </compile>
+  </artifact>
+  <artifact flavor="staging" build-type="debug">
+    <compile>
+      io.reactivex:rxandroid:0.24.0
+    </compile>
+    <compile>
+      com.jakewharton:butterknife:6.1.0
+    </compile>
+    <compile>
+      io.reactivex:rxjava:1.0.4
+    </compile>
+    <test-compile>
+      com.squareup.okio:okio:1.2.0
+    </test-compile>
+    <test-compile>
+      com.squareup.okhttp:okhttp:2.2.0
+    </test-compile>
+    <test-compile>
       junit:junit-dep:4.10
     </test-compile>
     <test-compile>
       org.hamcrest:hamcrest-core:1.1
     </test-compile>
   </artifact>
-  <artifact build-type="release">
+  <artifact flavor="staging" build-type="release">
     <compile>
       io.reactivex:rxandroid:0.24.0
     </compile>
